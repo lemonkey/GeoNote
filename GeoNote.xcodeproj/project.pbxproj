@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE9BB0F514F6F389008B04AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB0F414F6F389008B04AC /* UIKit.framework */; };
+		CE9BB0F714F6F389008B04AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB0F614F6F389008B04AC /* Foundation.framework */; };
+		CE9BB0F914F6F389008B04AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB0F814F6F389008B04AC /* CoreGraphics.framework */; };
+		CE9BB0FF14F6F389008B04AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB0FD14F6F389008B04AC /* InfoPlist.strings */; };
+		CE9BB10114F6F389008B04AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB10014F6F389008B04AC /* main.m */; };
+		CE9BB11F14F6F568008B04AC /* GeoNoteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB11C14F6F568008B04AC /* GeoNoteAppDelegate.m */; };
+		CE9BB12714F6F817008B04AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB12614F6F816008B04AC /* CoreLocation.framework */; };
+		CE9BB12914F6F81D008B04AC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB12814F6F81D008B04AC /* CoreData.framework */; };
+		CE9BB1B814F6FCD6008B04AC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1B514F6FCD6008B04AC /* MapViewController.m */; };
+		CE9BB1B914F6FCD6008B04AC /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1B714F6FCD6008B04AC /* NotesViewController.m */; };
+		CE9BB1BC14F6FCE6008B04AC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1BA14F6FCE6008B04AC /* MapViewController.xib */; };
+		CE9BB1BD14F6FCE6008B04AC /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1BB14F6FCE6008B04AC /* NotesViewController.xib */; };
+		CE9BB1CB14F6FF2B008B04AC /* tab_map.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1C714F6FF2B008B04AC /* tab_map.png */; };
+		CE9BB1CC14F6FF2B008B04AC /* tab_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1C814F6FF2B008B04AC /* tab_map@2x.png */; };
+		CE9BB1CD14F6FF2B008B04AC /* tab_notes.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1C914F6FF2B008B04AC /* tab_notes.png */; };
+		CE9BB1CE14F6FF2B008B04AC /* tab_notes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB1CA14F6FF2B008B04AC /* tab_notes@2x.png */; };
+		CE9BB1D114F701E0008B04AC /* NotesRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1D014F701DF008B04AC /* NotesRootTableViewController.m */; };
+		CE9BB1E314F70C4F008B04AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB1E214F70C4E008B04AC /* MapKit.framework */; };
+		CE9BB1E614F71E82008B04AC /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1E514F71E82008B04AC /* MapAnnotation.m */; };
+		CE9BB1FC14F85BCD008B04AC /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1FB14F85BCD008B04AC /* Utility.m */; };
+		CE9BB20014F85BF6008B04AC /* GPS.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB1FF14F85BF6008B04AC /* GPS.m */; };
+		CE9BB20F14F85D1E008B04AC /* UIApplication+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB20E14F85D1C008B04AC /* UIApplication+Network.m */; };
+		CE9BB21114F86423008B04AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BB21014F86422008B04AC /* SystemConfiguration.framework */; };
+		CE9BB21514F8BF75008B04AC /* blue_dot-transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB21414F8BF75008B04AC /* blue_dot-transparent.png */; };
+		CE9BB21D14FEDC85008B04AC /* AddNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB21B14FEDC85008B04AC /* AddNoteTableViewController.m */; };
+		CE9BB22214FEDCA9008B04AC /* EditNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB22014FEDCA9008B04AC /* EditNoteTableViewController.m */; };
+		CE9BB22B14FEDE52008B04AC /* TableViewFormCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB22A14FEDE52008B04AC /* TableViewFormCustomCell.m */; };
+		CE9BB22E14FEDE87008B04AC /* TableViewFormCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB22D14FEDE87008B04AC /* TableViewFormCustomCell.xib */; };
+		CE9BB23314FEDFE0008B04AC /* AddNoteCustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB23214FEDFDE008B04AC /* AddNoteCustomHeader.m */; };
+		CE9BB23614FEDFF6008B04AC /* AddNoteCustomFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB23514FEDFF5008B04AC /* AddNoteCustomFooter.m */; };
+		CE9BB23914FEE009008B04AC /* EditNoteCustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB23814FEE008008B04AC /* EditNoteCustomHeader.m */; };
+		CE9BB23C14FEE019008B04AC /* EditNoteCustomFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB23B14FEE019008B04AC /* EditNoteCustomFooter.m */; };
+		CE9BB24014FEE092008B04AC /* AddNoteCustomFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB23F14FEE091008B04AC /* AddNoteCustomFooter.xib */; };
+		CE9BB24414FEE103008B04AC /* AddNoteCustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB24114FEE101008B04AC /* AddNoteCustomHeader.xib */; };
+		CE9BB24514FEE103008B04AC /* EditNoteCustomFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB24214FEE102008B04AC /* EditNoteCustomFooter.xib */; };
+		CE9BB24614FEE103008B04AC /* EditNoteCustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB24314FEE102008B04AC /* EditNoteCustomHeader.xib */; };
+		CE9BB24914FEF5E3008B04AC /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB24714FEF5DF008B04AC /* Notes.xcdatamodeld */; };
+		CE9BB25314FEF7F5008B04AC /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB25214FEF7F5008B04AC /* Note.m */; };
+		CE9BB25814FEFC9F008B04AC /* NotesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB25714FEFC9D008B04AC /* NotesCustomCell.xib */; };
+		CE9BB289150020A3008B04AC /* NotesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB288150020A1008B04AC /* NotesCustomCell.m */; };
+		CE9BB28C15002143008B04AC /* MapRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB28B15002142008B04AC /* MapRootViewController.m */; };
+		CE9BB28E15002218008B04AC /* MapRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB28D15002218008B04AC /* MapRootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE9BB0F014F6F389008B04AC /* GeoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9BB0F414F6F389008B04AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE9BB0F614F6F389008B04AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE9BB0F814F6F389008B04AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE9BB0FC14F6F389008B04AC /* GeoNote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoNote-Info.plist"; sourceTree = "<group>"; };
+		CE9BB0FE14F6F389008B04AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE9BB10014F6F389008B04AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE9BB10214F6F389008B04AC /* GeoNote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoNote-Prefix.pch"; sourceTree = "<group>"; };
+		CE9BB11B14F6F568008B04AC /* GeoNoteAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoNoteAppDelegate.h; path = Classes/GeoNoteAppDelegate.h; sourceTree = "<group>"; };
+		CE9BB11C14F6F568008B04AC /* GeoNoteAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoNoteAppDelegate.m; path = Classes/GeoNoteAppDelegate.m; sourceTree = "<group>"; };
+		CE9BB12314F6F62F008B04AC /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		CE9BB12414F6F63B008B04AC /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		CE9BB12514F6F647008B04AC /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CE9BB12614F6F816008B04AC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE9BB12814F6F81D008B04AC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE9BB1B414F6FCD6008B04AC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Classes/MapViewController.h; sourceTree = "<group>"; };
+		CE9BB1B514F6FCD6008B04AC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Classes/MapViewController.m; sourceTree = "<group>"; };
+		CE9BB1B614F6FCD6008B04AC /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesViewController.h; path = Classes/NotesViewController.h; sourceTree = "<group>"; };
+		CE9BB1B714F6FCD6008B04AC /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesViewController.m; path = Classes/NotesViewController.m; sourceTree = "<group>"; };
+		CE9BB1BA14F6FCE6008B04AC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Resources/Views/MapViewController.xib; sourceTree = "<group>"; };
+		CE9BB1BB14F6FCE6008B04AC /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesViewController.xib; path = Resources/Views/NotesViewController.xib; sourceTree = "<group>"; };
+		CE9BB1C714F6FF2B008B04AC /* tab_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_map.png; path = Resources/Images/tab_map.png; sourceTree = "<group>"; };
+		CE9BB1C814F6FF2B008B04AC /* tab_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_map@2x.png"; path = "Resources/Images/tab_map@2x.png"; sourceTree = "<group>"; };
+		CE9BB1C914F6FF2B008B04AC /* tab_notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_notes.png; path = Resources/Images/tab_notes.png; sourceTree = "<group>"; };
+		CE9BB1CA14F6FF2B008B04AC /* tab_notes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_notes@2x.png"; path = "Resources/Images/tab_notes@2x.png"; sourceTree = "<group>"; };
+		CE9BB1CF14F701DF008B04AC /* NotesRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesRootTableViewController.h; path = Classes/NotesRootTableViewController.h; sourceTree = "<group>"; };
+		CE9BB1D014F701DF008B04AC /* NotesRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesRootTableViewController.m; path = Classes/NotesRootTableViewController.m; sourceTree = "<group>"; };
+		CE9BB1E214F70C4E008B04AC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE9BB1E414F71E81008B04AC /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapAnnotation.h; path = Classes/MapAnnotation.h; sourceTree = "<group>"; };
+		CE9BB1E514F71E82008B04AC /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapAnnotation.m; path = Classes/MapAnnotation.m; sourceTree = "<group>"; };
+		CE9BB1FA14F85BCD008B04AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Classes/Utility.h; sourceTree = "<group>"; };
+		CE9BB1FB14F85BCD008B04AC /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = Classes/Utility.m; sourceTree = "<group>"; };
+		CE9BB1FE14F85BF6008B04AC /* GPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPS.h; path = Classes/GPS.h; sourceTree = "<group>"; };
+		CE9BB1FF14F85BF6008B04AC /* GPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPS.m; path = Classes/GPS.m; sourceTree = "<group>"; };
+		CE9BB20D14F85D1C008B04AC /* UIApplication+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+Network.h"; path = "Classes/UIApplication+Network.h"; sourceTree = "<group>"; };
+		CE9BB20E14F85D1C008B04AC /* UIApplication+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Network.m"; path = "Classes/UIApplication+Network.m"; sourceTree = "<group>"; };
+		CE9BB21014F86422008B04AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE9BB21414F8BF75008B04AC /* blue_dot-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blue_dot-transparent.png"; path = "Resources/Images/blue_dot-transparent.png"; sourceTree = "<group>"; };
+		CE9BB21A14FEDC85008B04AC /* AddNoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteTableViewController.h; path = Classes/AddNoteTableViewController.h; sourceTree = "<group>"; };
+		CE9BB21B14FEDC85008B04AC /* AddNoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteTableViewController.m; path = Classes/AddNoteTableViewController.m; sourceTree = "<group>"; };
+		CE9BB21F14FEDCA9008B04AC /* EditNoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditNoteTableViewController.h; path = Classes/EditNoteTableViewController.h; sourceTree = "<group>"; };
+		CE9BB22014FEDCA9008B04AC /* EditNoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditNoteTableViewController.m; path = Classes/EditNoteTableViewController.m; sourceTree = "<group>"; };
+		CE9BB22914FEDE52008B04AC /* TableViewFormCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewFormCustomCell.h; path = Classes/TableViewFormCustomCell.h; sourceTree = "<group>"; };
+		CE9BB22A14FEDE52008B04AC /* TableViewFormCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewFormCustomCell.m; path = Classes/TableViewFormCustomCell.m; sourceTree = "<group>"; };
+		CE9BB22D14FEDE87008B04AC /* TableViewFormCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewFormCustomCell.xib; path = Resources/Views/TableViewFormCustomCell.xib; sourceTree = "<group>"; };
+		CE9BB23114FEDFDD008B04AC /* AddNoteCustomHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteCustomHeader.h; path = Classes/AddNoteCustomHeader.h; sourceTree = "<group>"; };
+		CE9BB23214FEDFDE008B04AC /* AddNoteCustomHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteCustomHeader.m; path = Classes/AddNoteCustomHeader.m; sourceTree = "<group>"; };
+		CE9BB23414FEDFF4008B04AC /* AddNoteCustomFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteCustomFooter.h; path = Classes/AddNoteCustomFooter.h; sourceTree = "<group>"; };
+		CE9BB23514FEDFF5008B04AC /* AddNoteCustomFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteCustomFooter.m; path = Classes/AddNoteCustomFooter.m; sourceTree = "<group>"; };
+		CE9BB23714FEE008008B04AC /* EditNoteCustomHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditNoteCustomHeader.h; path = Classes/EditNoteCustomHeader.h; sourceTree = "<group>"; };
+		CE9BB23814FEE008008B04AC /* EditNoteCustomHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditNoteCustomHeader.m; path = Classes/EditNoteCustomHeader.m; sourceTree = "<group>"; };
+		CE9BB23A14FEE018008B04AC /* EditNoteCustomFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditNoteCustomFooter.h; path = Classes/EditNoteCustomFooter.h; sourceTree = "<group>"; };
+		CE9BB23B14FEE019008B04AC /* EditNoteCustomFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditNoteCustomFooter.m; path = Classes/EditNoteCustomFooter.m; sourceTree = "<group>"; };
+		CE9BB23F14FEE091008B04AC /* AddNoteCustomFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteCustomFooter.xib; path = Resources/Views/AddNoteCustomFooter.xib; sourceTree = "<group>"; };
+		CE9BB24114FEE101008B04AC /* AddNoteCustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteCustomHeader.xib; path = Resources/Views/AddNoteCustomHeader.xib; sourceTree = "<group>"; };
+		CE9BB24214FEE102008B04AC /* EditNoteCustomFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditNoteCustomFooter.xib; path = Resources/Views/EditNoteCustomFooter.xib; sourceTree = "<group>"; };
+		CE9BB24314FEE102008B04AC /* EditNoteCustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditNoteCustomHeader.xib; path = Resources/Views/EditNoteCustomHeader.xib; sourceTree = "<group>"; };
+		CE9BB24814FEF5E3008B04AC /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		CE9BB25114FEF7F5008B04AC /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = Classes/Note.h; sourceTree = "<group>"; };
+		CE9BB25214FEF7F5008B04AC /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = Classes/Note.m; sourceTree = "<group>"; };
+		CE9BB25714FEFC9D008B04AC /* NotesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotesCustomCell.xib; path = Resources/Views/NotesCustomCell.xib; sourceTree = "<group>"; };
+		CE9BB2871500209F008B04AC /* NotesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesCustomCell.h; path = Classes/NotesCustomCell.h; sourceTree = "<group>"; };
+		CE9BB288150020A1008B04AC /* NotesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesCustomCell.m; path = Classes/NotesCustomCell.m; sourceTree = "<group>"; };
+		CE9BB28A15002140008B04AC /* MapRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapRootViewController.h; path = Classes/MapRootViewController.h; sourceTree = "<group>"; };
+		CE9BB28B15002142008B04AC /* MapRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapRootViewController.m; path = Classes/MapRootViewController.m; sourceTree = "<group>"; };
+		CE9BB28D15002218008B04AC /* MapRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapRootViewController.xib; path = Resources/Views/MapRootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE9BB0ED14F6F389008B04AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9BB21114F86423008B04AC /* SystemConfiguration.framework in Frameworks */,
+				CE9BB1E314F70C4F008B04AC /* MapKit.framework in Frameworks */,
+				CE9BB12914F6F81D008B04AC /* CoreData.framework in Frameworks */,
+				CE9BB12714F6F817008B04AC /* CoreLocation.framework in Frameworks */,
+				CE9BB0F514F6F389008B04AC /* UIKit.framework in Frameworks */,
+				CE9BB0F714F6F389008B04AC /* Foundation.framework in Frameworks */,
+				CE9BB0F914F6F389008B04AC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE9BB0E514F6F389008B04AC = {
+			isa = PBXGroup;
+			children = (
+				CE9BB0FA14F6F389008B04AC /* GeoNote */,
+				CE9BB0F314F6F389008B04AC /* Frameworks */,
+				CE9BB0F114F6F389008B04AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE9BB0F114F6F389008B04AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB0F014F6F389008B04AC /* GeoNote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE9BB0F314F6F389008B04AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB21014F86422008B04AC /* SystemConfiguration.framework */,
+				CE9BB1E214F70C4E008B04AC /* MapKit.framework */,
+				CE9BB0F614F6F389008B04AC /* Foundation.framework */,
+				CE9BB0F414F6F389008B04AC /* UIKit.framework */,
+				CE9BB12814F6F81D008B04AC /* CoreData.framework */,
+				CE9BB12614F6F816008B04AC /* CoreLocation.framework */,
+				CE9BB0F814F6F389008B04AC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE9BB0FA14F6F389008B04AC /* GeoNote */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB12214F6F61B008B04AC /* Misc */,
+				CE9BB11A14F6F54B008B04AC /* Classes */,
+				CE9BB0FB14F6F389008B04AC /* Supporting Files */,
+				CE9BB12A14F6F891008B04AC /* Resources */,
+			);
+			path = GeoNote;
+			sourceTree = "<group>";
+		};
+		CE9BB0FB14F6F389008B04AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB10014F6F389008B04AC /* main.m */,
+				CE9BB10214F6F389008B04AC /* GeoNote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE9BB11A14F6F54B008B04AC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB24E14FEF74C008B04AC /* Data */,
+				CE9BB1F914F85B39008B04AC /* Utilities */,
+				CE9BB12114F6F59A008B04AC /* Views */,
+				CE9BB11B14F6F568008B04AC /* GeoNoteAppDelegate.h */,
+				CE9BB11C14F6F568008B04AC /* GeoNoteAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CE9BB12114F6F59A008B04AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB22814FEDDD8008B04AC /* Common */,
+				CE9BB1D214F701E8008B04AC /* Tabs */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CE9BB12214F6F61B008B04AC /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB12314F6F62F008B04AC /* Macros.h */,
+				CE9BB12414F6F63B008B04AC /* Settings.h */,
+				CE9BB12514F6F647008B04AC /* Constants.h */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		CE9BB12A14F6F891008B04AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB24F14FEF781008B04AC /* Data */,
+				CE9BB1BE14F6FE60008B04AC /* Images */,
+				CE9BB12B14F6F8B4008B04AC /* Views */,
+				CE9BB0FC14F6F389008B04AC /* GeoNote-Info.plist */,
+				CE9BB0FD14F6F389008B04AC /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CE9BB12B14F6F8B4008B04AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB22C14FEDE64008B04AC /* Common */,
+				CE9BB1D514F70478008B04AC /* Tabs */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CE9BB1BE14F6FE60008B04AC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB21414F8BF75008B04AC /* blue_dot-transparent.png */,
+				CE9BB1C714F6FF2B008B04AC /* tab_map.png */,
+				CE9BB1C814F6FF2B008B04AC /* tab_map@2x.png */,
+				CE9BB1C914F6FF2B008B04AC /* tab_notes.png */,
+				CE9BB1CA14F6FF2B008B04AC /* tab_notes@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CE9BB1D214F701E8008B04AC /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1D314F701F4008B04AC /* Notes */,
+				CE9BB1D414F701FA008B04AC /* Map */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		CE9BB1D314F701F4008B04AC /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB21914FEDC56008B04AC /* Listing */,
+				CE9BB21714FEDC44008B04AC /* Add */,
+				CE9BB21814FEDC4C008B04AC /* Edit */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		CE9BB1D414F701FA008B04AC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1B414F6FCD6008B04AC /* MapViewController.h */,
+				CE9BB1B514F6FCD6008B04AC /* MapViewController.m */,
+				CE9BB28A15002140008B04AC /* MapRootViewController.h */,
+				CE9BB28B15002142008B04AC /* MapRootViewController.m */,
+				CE9BB1E414F71E81008B04AC /* MapAnnotation.h */,
+				CE9BB1E514F71E82008B04AC /* MapAnnotation.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		CE9BB1D514F70478008B04AC /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1D614F7047F008B04AC /* Notes */,
+				CE9BB1D714F70484008B04AC /* Map */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		CE9BB1D614F7047F008B04AC /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1BB14F6FCE6008B04AC /* NotesViewController.xib */,
+				CE9BB24114FEE101008B04AC /* AddNoteCustomHeader.xib */,
+				CE9BB23F14FEE091008B04AC /* AddNoteCustomFooter.xib */,
+				CE9BB24314FEE102008B04AC /* EditNoteCustomHeader.xib */,
+				CE9BB24214FEE102008B04AC /* EditNoteCustomFooter.xib */,
+				CE9BB25714FEFC9D008B04AC /* NotesCustomCell.xib */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		CE9BB1D714F70484008B04AC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1BA14F6FCE6008B04AC /* MapViewController.xib */,
+				CE9BB28D15002218008B04AC /* MapRootViewController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		CE9BB1F914F85B39008B04AC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1FD14F85BD3008B04AC /* Network */,
+				CE9BB1FA14F85BCD008B04AC /* Utility.h */,
+				CE9BB1FB14F85BCD008B04AC /* Utility.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		CE9BB1FD14F85BD3008B04AC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB20D14F85D1C008B04AC /* UIApplication+Network.h */,
+				CE9BB20E14F85D1C008B04AC /* UIApplication+Network.m */,
+				CE9BB1FE14F85BF6008B04AC /* GPS.h */,
+				CE9BB1FF14F85BF6008B04AC /* GPS.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		CE9BB21714FEDC44008B04AC /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB21A14FEDC85008B04AC /* AddNoteTableViewController.h */,
+				CE9BB21B14FEDC85008B04AC /* AddNoteTableViewController.m */,
+				CE9BB23114FEDFDD008B04AC /* AddNoteCustomHeader.h */,
+				CE9BB23214FEDFDE008B04AC /* AddNoteCustomHeader.m */,
+				CE9BB23414FEDFF4008B04AC /* AddNoteCustomFooter.h */,
+				CE9BB23514FEDFF5008B04AC /* AddNoteCustomFooter.m */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		CE9BB21814FEDC4C008B04AC /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB21F14FEDCA9008B04AC /* EditNoteTableViewController.h */,
+				CE9BB22014FEDCA9008B04AC /* EditNoteTableViewController.m */,
+				CE9BB23714FEE008008B04AC /* EditNoteCustomHeader.h */,
+				CE9BB23814FEE008008B04AC /* EditNoteCustomHeader.m */,
+				CE9BB23A14FEE018008B04AC /* EditNoteCustomFooter.h */,
+				CE9BB23B14FEE019008B04AC /* EditNoteCustomFooter.m */,
+			);
+			name = Edit;
+			sourceTree = "<group>";
+		};
+		CE9BB21914FEDC56008B04AC /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB1B614F6FCD6008B04AC /* NotesViewController.h */,
+				CE9BB1B714F6FCD6008B04AC /* NotesViewController.m */,
+				CE9BB1CF14F701DF008B04AC /* NotesRootTableViewController.h */,
+				CE9BB1D014F701DF008B04AC /* NotesRootTableViewController.m */,
+				CE9BB2871500209F008B04AC /* NotesCustomCell.h */,
+				CE9BB288150020A1008B04AC /* NotesCustomCell.m */,
+			);
+			name = Listing;
+			sourceTree = "<group>";
+		};
+		CE9BB22814FEDDD8008B04AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB22914FEDE52008B04AC /* TableViewFormCustomCell.h */,
+				CE9BB22A14FEDE52008B04AC /* TableViewFormCustomCell.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		CE9BB22C14FEDE64008B04AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB22D14FEDE87008B04AC /* TableViewFormCustomCell.xib */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		CE9BB24D14FEF734008B04AC /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB25114FEF7F5008B04AC /* Note.h */,
+				CE9BB25214FEF7F5008B04AC /* Note.m */,
+			);
+			name = Note;
+			sourceTree = "<group>";
+		};
+		CE9BB24E14FEF74C008B04AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB24D14FEF734008B04AC /* Note */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		CE9BB24F14FEF781008B04AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB25014FEF78C008B04AC /* Note */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		CE9BB25014FEF78C008B04AC /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BB24714FEF5DF008B04AC /* Notes.xcdatamodeld */,
+			);
+			name = Note;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE9BB0EF14F6F389008B04AC /* GeoNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9BB10E14F6F389008B04AC /* Build configuration list for PBXNativeTarget "GeoNote" */;
+			buildPhases = (
+				CE9BB0EC14F6F389008B04AC /* Sources */,
+				CE9BB0ED14F6F389008B04AC /* Frameworks */,
+				CE9BB0EE14F6F389008B04AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoNote;
+			productName = GeoNote;
+			productReference = CE9BB0F014F6F389008B04AC /* GeoNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE9BB0E714F6F389008B04AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = aribraginsky.com;
+			};
+			buildConfigurationList = CE9BB0EA14F6F389008B04AC /* Build configuration list for PBXProject "GeoNote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE9BB0E514F6F389008B04AC;
+			productRefGroup = CE9BB0F114F6F389008B04AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE9BB0EF14F6F389008B04AC /* GeoNote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE9BB0EE14F6F389008B04AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9BB0FF14F6F389008B04AC /* InfoPlist.strings in Resources */,
+				CE9BB1BC14F6FCE6008B04AC /* MapViewController.xib in Resources */,
+				CE9BB1BD14F6FCE6008B04AC /* NotesViewController.xib in Resources */,
+				CE9BB1CB14F6FF2B008B04AC /* tab_map.png in Resources */,
+				CE9BB1CC14F6FF2B008B04AC /* tab_map@2x.png in Resources */,
+				CE9BB1CD14F6FF2B008B04AC /* tab_notes.png in Resources */,
+				CE9BB1CE14F6FF2B008B04AC /* tab_notes@2x.png in Resources */,
+				CE9BB21514F8BF75008B04AC /* blue_dot-transparent.png in Resources */,
+				CE9BB22E14FEDE87008B04AC /* TableViewFormCustomCell.xib in Resources */,
+				CE9BB24014FEE092008B04AC /* AddNoteCustomFooter.xib in Resources */,
+				CE9BB24414FEE103008B04AC /* AddNoteCustomHeader.xib in Resources */,
+				CE9BB24514FEE103008B04AC /* EditNoteCustomFooter.xib in Resources */,
+				CE9BB24614FEE103008B04AC /* EditNoteCustomHeader.xib in Resources */,
+				CE9BB25814FEFC9F008B04AC /* NotesCustomCell.xib in Resources */,
+				CE9BB28E15002218008B04AC /* MapRootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE9BB0EC14F6F389008B04AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9BB10114F6F389008B04AC /* main.m in Sources */,
+				CE9BB11F14F6F568008B04AC /* GeoNoteAppDelegate.m in Sources */,
+				CE9BB1B814F6FCD6008B04AC /* MapViewController.m in Sources */,
+				CE9BB1B914F6FCD6008B04AC /* NotesViewController.m in Sources */,
+				CE9BB1D114F701E0008B04AC /* NotesRootTableViewController.m in Sources */,
+				CE9BB1E614F71E82008B04AC /* MapAnnotation.m in Sources */,
+				CE9BB1FC14F85BCD008B04AC /* Utility.m in Sources */,
+				CE9BB20014F85BF6008B04AC /* GPS.m in Sources */,
+				CE9BB20F14F85D1E008B04AC /* UIApplication+Network.m in Sources */,
+				CE9BB21D14FEDC85008B04AC /* AddNoteTableViewController.m in Sources */,
+				CE9BB22214FEDCA9008B04AC /* EditNoteTableViewController.m in Sources */,
+				CE9BB22B14FEDE52008B04AC /* TableViewFormCustomCell.m in Sources */,
+				CE9BB23314FEDFE0008B04AC /* AddNoteCustomHeader.m in Sources */,
+				CE9BB23614FEDFF6008B04AC /* AddNoteCustomFooter.m in Sources */,
+				CE9BB23914FEE009008B04AC /* EditNoteCustomHeader.m in Sources */,
+				CE9BB23C14FEE019008B04AC /* EditNoteCustomFooter.m in Sources */,
+				CE9BB24914FEF5E3008B04AC /* Notes.xcdatamodeld in Sources */,
+				CE9BB25314FEF7F5008B04AC /* Note.m in Sources */,
+				CE9BB289150020A3008B04AC /* NotesCustomCell.m in Sources */,
+				CE9BB28C15002143008B04AC /* MapRootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE9BB0FD14F6F389008B04AC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9BB0FE14F6F389008B04AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE9BB10C14F6F389008B04AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ari Braginsky (97YB4L8X9M)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C9D5837B-208D-4B26-BD7C-E2DCC4D5A91A";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE9BB10D14F6F389008B04AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ari Braginsky (97YB4L8X9M)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C9D5837B-208D-4B26-BD7C-E2DCC4D5A91A";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE9BB10F14F6F389008B04AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoNote/GeoNote-Prefix.pch";
+				INFOPLIST_FILE = "GeoNote/GeoNote-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DDEBUG";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE9BB11014F6F389008B04AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoNote/GeoNote-Prefix.pch";
+				INFOPLIST_FILE = "GeoNote/GeoNote-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = (
+					"-DRELEASE",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE9BB0EA14F6F389008B04AC /* Build configuration list for PBXProject "GeoNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9BB10C14F6F389008B04AC /* Debug */,
+				CE9BB10D14F6F389008B04AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9BB10E14F6F389008B04AC /* Build configuration list for PBXNativeTarget "GeoNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9BB10F14F6F389008B04AC /* Debug */,
+				CE9BB11014F6F389008B04AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE9BB24714FEF5DF008B04AC /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE9BB24814FEF5E3008B04AC /* Notes.xcdatamodel */,
+			);
+			currentVersion = CE9BB24814FEF5E3008B04AC /* Notes.xcdatamodel */;
+			name = Notes.xcdatamodeld;
+			path = Resources/Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE9BB0E714F6F389008B04AC /* Project object */;
+}

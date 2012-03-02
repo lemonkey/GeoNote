@@ -1,0 +1,46 @@
+GeoNote
+=======
+GeoNote is a simple iOS application targeting iOS 5.0 and above devices that allows you to add notes at your current location and retrieve them later.
+
+Previous notes can be seen on the map around your current location and they can be edited/deleted.
+
+Notes are stored locally on the device using CoreData.
+
+
+Versions
+--------
+v1.0 -- Initial check-in 2012/03/01.
+
+
+Mailing List
+------------
+Questions?  Feel free to contact me at contact@aribraginsky.com.
+
+
+Authors
+-------
+
+** Ari Braginsky **
+
++ http://aribraginsky.com
++ http://portfolio.aribraginsky.com
++ http://twitter.com/lemonkey
++ http://github.com/lemonkey
+
+
+Copyright and license
+---------------------
+
+Copyright 2012 Ari Braginsky
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this work except in compliance with the License.
+You may obtain a copy of the License in the LICENSE file, or at:
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

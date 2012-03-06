@@ -34,12 +34,28 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
+    DLog(@"");
+    
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+// Called when app delegate receives low memory warning and notes view controller
+// isn't currently visible.
+-(void)memoryWarningCleanup {
+    DLog(@"");
+
+    // For proper cleanup of MapRootViewController
+    for (UIViewController *curVC in self.mapNavigationController.viewControllers) {
+        [curVC release];
+    }
+    self.mapNavigationController.viewControllers = nil;
+    
+    [self.mapNavigationController.view removeFromSuperview];
+    self.mapNavigationController = nil;
 }
 
 #pragma mark - View lifecycle

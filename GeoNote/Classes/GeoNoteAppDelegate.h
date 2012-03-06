@@ -24,6 +24,7 @@
 @property (readonly, nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (readonly, nonatomic, retain) NSManagedObjectModel *managedObjectModel;
 @property (readonly, nonatomic, retain) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, retain) UIViewController *currentViewController;
 
 void uncaughtExceptionHandler(NSException *exception);
 -(void)checkNetworkStatus;

@@ -10,7 +10,7 @@ Notes are stored locally on the device using CoreData.
 Versions
 --------
 v1.0 -- Initial check-in 2012/03/01.
-
+v1.1 -- Memory optimizations, note table view frame adjustment, and other fixes.
 
 Mailing List
 ------------

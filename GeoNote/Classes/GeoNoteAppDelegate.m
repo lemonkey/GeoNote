@@ -21,6 +21,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize currentViewController = _currentViewController;
 
 - (void)dealloc {
     DLog(@"");
@@ -32,7 +33,9 @@
     [_managedObjectContext release];
     [_managedObjectModel release];
     [_persistentStoreCoordinator release];   
-        
+    
+    self.currentViewController = nil;
+    
     [super dealloc];
 }
 
@@ -55,6 +58,8 @@
         self.tabBarController = [[[UITabBarController alloc] init] autorelease];
         self.tabBarController.viewControllers = [NSArray arrayWithObjects:notesVC, mapVC, nil];
         
+        self.currentViewController = notesVC;
+        
         self.tabBarController.delegate = self;
         
         self.window.rootViewController = self.tabBarController;
@@ -70,6 +75,22 @@
 
 -(void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     DLog(@"");
+    
+    // Clear components associated with tab that isn't currently visible
+    if([self.currentViewController isKindOfClass:[NotesViewController class]]) {
+        DLog(@"Cleaning up map view controller");
+        
+        MapViewController *mapVC = (MapViewController *)[self.tabBarController.viewControllers objectAtIndex:1];
+        [mapVC memoryWarningCleanup];
+        
+    } else {
+        if([self.currentViewController isKindOfClass:[MapViewController class]]) {
+            DLog(@"Cleaning up notes view controller");
+            
+            NotesViewController *notesVC = (NotesViewController *)[self.tabBarController.viewControllers objectAtIndex:0];
+            [notesVC memoryWarningCleanup];
+        }
+    }
     
 }
 
@@ -151,18 +172,21 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     DLog(@"GeoNoteAppDelegate - tabBarController:didSelectViewController:%@", viewController);
 
+    self.currentViewController = nil;
+    self.currentViewController = viewController;
+
     if([viewController isKindOfClass:[MapViewController class]]) {
-        DLog(@"Map view");
+        DLog(@"Map tab selected");
 
         // Map will automatically refresh on view
         
     } else {
         
         if([viewController isKindOfClass:[NotesViewController class]]) {
-            DLog(@"Notes view");
+            DLog(@"Notes tab selected");
 
             // Notes listing will automatically refresh on view
-            
+
         }
     }
 }
@@ -172,6 +196,11 @@ void uncaughtExceptionHandler(NSException *exception) {
 // agrees to go directly to the map view from the alert.
 -(void)switchToMap {
     DLog(@"");
+    
+    self.currentViewController = nil;
+    MapViewController *mapVC = (MapViewController *)[self.tabBarController.viewControllers objectAtIndex:1];
+    self.currentViewController = mapVC;
+
     [self.tabBarController setSelectedIndex:kMapViewIndex];
 }
 

@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) UINavigationController *mapNavigationController;
 
+-(void)memoryWarningCleanup;
+
 @end

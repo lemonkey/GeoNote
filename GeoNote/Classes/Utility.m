@@ -53,11 +53,15 @@
 -(NSNumber *)getNextNoteIndex {
     DLog(@"lastNoteIndex: %@", self.lastNoteIndex);
     
+    if(!self.lastNoteIndex) {
+        self.lastNoteIndex = [NSNumber numberWithInt:0];
+    }
+    
     self.lastNoteIndex = [NSNumber numberWithInt:([self.lastNoteIndex intValue]+1)];
     
     [[NSUserDefaults standardUserDefaults] setObject:self.lastNoteIndex forKey:kUD_LastNoteIndex];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+
     return self.lastNoteIndex;
 }
 

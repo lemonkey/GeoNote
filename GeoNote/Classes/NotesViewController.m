@@ -41,6 +41,15 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+// Called when app delegate receives low memory warning and notes view controller
+// isn't currently visible.
+-(void)memoryWarningCleanup {
+    DLog(@"");
+
+    [self.notesNavigationController.view removeFromSuperview];
+    self.notesNavigationController = nil;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -51,9 +60,11 @@
     
     if(self.notesNavigationController == nil) {
         NotesRootTableViewController *notesRootTableViewController = [[NotesRootTableViewController alloc] initWithStyle:UITableViewStylePlain];
-        
+
         UINavigationController *aNavigationController = [[UINavigationController alloc] initWithRootViewController:notesRootTableViewController];
         self.notesNavigationController = aNavigationController;
+
+        [[self.notesNavigationController view] setFrame:CGRectMake(0.0, 0.0, 320.0, 410.0)];
         
         [self.view addSubview:[self.notesNavigationController view]];
         

@@ -64,8 +64,9 @@
     return self;
 }
 							
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
+    DLog(@"");
+    
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
@@ -263,8 +264,9 @@
 
     if(self.currentNote) {
         
-        self.curMapRegionSpan = 0.00;
+        [self resetMap];
         
+        /*
         if(!self.mapView)
         {
             DLog(@"MapViewController - refreshMap - creating mapView");
@@ -287,7 +289,8 @@
                 }
             }
         }
-
+        */
+        
         self.currentLocation = nil;
         self.currentLocation = [[CLLocation alloc] initWithLatitude:[self.currentNote.latitude doubleValue] longitude:[self.currentNote.longitude doubleValue]];
 
@@ -308,13 +311,34 @@
     [self refreshMap];
 }
 
+-(void)resetMap {
+    DLog(@"");
+    
+    self.curMapRegionSpan = 0.00;
+    
+    if(self.mapView) {
+		[self.mapView removeFromSuperview]; 
+		[self.mapView removeAnnotations:[self.mapView annotations]]; 
+		self.mapView.delegate = nil; 
+		self.mapView = nil;
+	}
+    self.mapView = [[MKMapView alloc] initWithFrame:self.mapViewContainer.frame];
+    self.mapView.userLocation.title = @"Your location";
+    self.mapView.scrollEnabled = YES;
+    self.mapView.zoomEnabled = YES;
+    self.mapView.delegate = self;
+    
+    [self.mapViewContainer insertSubview:self.mapView atIndex:0];
+}
+
 -(void)refreshMap {
     DLog(@"");
     
     // Note: this should also be called when switching tabs back..
+
+    [self resetMap];
     
-    self.curMapRegionSpan = 0.00;
-    
+    /*
     if(!self.mapView)
 	{
         DLog(@"MapViewController - refreshMap - creating mapView");
@@ -330,7 +354,8 @@
 	} else {
         DLog(@"MapViewController - refreshMap - mapView already exists");
     }
-	
+	*/
+    
     // Remove saved note annotations.
     for(MapAnnotation *savedNoteAnnotation in self.savedNoteAnnotations) {
         if(savedNoteAnnotation) {

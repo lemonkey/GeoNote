@@ -34,6 +34,7 @@
 @property (nonatomic, retain) Note *currentNote;
 
 -(void)refreshMap;
+-(void)resetMap;
 -(void)updateMapView:(CLLocation *)location isFinalLocation:(BOOL)final;
 -(void)zoomMap:(CLLocation *)location isFinalLocation:(BOOL)final;
 -(IBAction)btnRefreshClick:(UIBarButtonItem *)sender;

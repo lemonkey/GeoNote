@@ -59,7 +59,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+
     self.appDelegate = (GeoNoteAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     self.title = @"Notes";
@@ -85,7 +85,7 @@
         [alert show];
         [alert release];
     }
-    
+     
     self.isFirstLoad = NO;
 }
 
@@ -255,7 +255,7 @@
     // For '>' icon
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    //[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 
     return cell;
 }
@@ -343,6 +343,9 @@
 	[self.navigationController pushViewController:mapRootVC animated:YES];
 	
     [mapRootVC release];
+    
+    // De-select cell
+    [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
 }
 
 @end
